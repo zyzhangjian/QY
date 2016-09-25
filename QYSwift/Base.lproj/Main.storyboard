@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Pvn-ZN-eN1">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Destination View Controller-->
+        <scene sceneID="6GH-5P-Mhk">
+            <objects>
+                <viewController id="BqT-0a-M4v" customClass="DestinationViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="BV3-97-pEO"/>
+                        <viewControllerLayoutGuide type="bottom" id="dMe-mF-Nus"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="F6g-xZ-Ltt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Tab_Category_80x50_" selectedImage="Tab_Category_Sele_80x50_" id="S4q-Ce-bUA">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="jfD-bM-8pp"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMB-iG-V5i" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-1914"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hq5-ra-3nj">
+            <objects>
+                <navigationController id="Zc8-rl-oGO" customClass="BaseNavViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="mgO-cK-5ZH"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="s7u-ge-lyc">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="khB-KT-O5L"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qUl-74-tsu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="-2599"/>
+        </scene>
+        <!--Base Tab Bar Controller-->
+        <scene sceneID="TAb-7T-gr7">
+            <objects>
+                <tabBarController id="Pvn-ZN-eN1" customClass="BaseTabBarController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="HHN-2J-uMV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Zc8-rl-oGO" kind="relationship" relationship="viewControllers" id="Vhk-gm-Phy"/>
+                        <segue destination="S1R-qx-mlb" kind="relationship" relationship="viewControllers" id="mcd-xl-RXZ"/>
+                        <segue destination="6J3-1T-7EW" kind="relationship" relationship="viewControllers" id="lNc-h1-b56"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5bG-ZX-7hv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-461" y="-2244"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Tab_Recommand_80x50_" selectedImage="Tab_Recommand_Sele_80x50_" id="SVj-Nj-Hmk">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="kZe-T5-N4o"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-2599"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="hBH-F7-OPN">
+            <objects>
+                <navigationController id="S1R-qx-mlb" customClass="BaseNavViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="hgu-Gt-MW4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XlD-JK-s6a">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BqT-0a-M4v" kind="relationship" relationship="rootViewController" id="ASM-R6-zPU"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1tv-8G-25T" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="-1907"/>
+        </scene>
+        <!--My View Controller-->
+        <scene sceneID="UYs-A5-hnN">
+            <objects>
+                <viewController id="7PG-Yn-dap" customClass="MyViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Ka-dY-wAz"/>
+                        <viewControllerLayoutGuide type="bottom" id="3bl-zW-k3i"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mst-oZ-aXp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="Tab_Mine_80x50_" selectedImage="Tab_Mine_Sele_80x50_" id="rg4-vY-3M7">
+                        <inset key="imageInsets" minX="0.0" minY="6" maxX="0.0" maxY="-6"/>
+                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="4nH-8y-YMo"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4xt-eS-RX3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="359" y="-1250"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="z15-eo-bNW">
+            <objects>
+                <navigationController id="6J3-1T-7EW" customClass="BaseNavViewController" customModule="QYSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="FhC-lQ-6Tt"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ABL-8z-bSm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="7PG-Yn-dap" kind="relationship" relationship="rootViewController" id="Mry-wX-3dM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Pg-Sf-ZO6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10" y="-1243"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Tab_Category_80x50_" width="80" height="50"/>
+        <image name="Tab_Category_Sele_80x50_" width="80" height="50"/>
+        <image name="Tab_Mine_80x50_" width="80" height="50"/>
+        <image name="Tab_Mine_Sele_80x50_" width="80" height="50"/>
+        <image name="Tab_Recommand_80x50_" width="80" height="50"/>
+        <image name="Tab_Recommand_Sele_80x50_" width="80" height="50"/>
+    </resources>
+</document>
