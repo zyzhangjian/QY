@@ -80,6 +80,7 @@ class LoginViewController: BaseViewController {
         
         rootSV = UIScrollView.init(frame: CGRectMake(0, segmented.bottom() , ScreenWidth, ScreenHeight - segmented.bottom() - 66))
         rootSV.bounces = false
+        rootSV.pagingEnabled = true
         rootSV.delegate = self
         rootSV.showsVerticalScrollIndicator = false
         rootSV.showsHorizontalScrollIndicator = false
