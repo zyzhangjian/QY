@@ -9,9 +9,12 @@
 /* Begin PBXBuildFile section */
 		0216E9DF1D90113A00901096 /* DestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216E9DE1D90113A00901096 /* DestinationViewController.swift */; };
 		0216E9E11D90117500901096 /* DestinationTableVie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0216E9E01D90117500901096 /* DestinationTableVie.swift */; };
-		021C36991D97923C00A1C00E /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C36981D97923C00A1C00E /* LoginViewController.swift */; };
 		021C369B1D97977400A1C00E /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 021C369A1D97977400A1C00E /* UserInfo.swift */; };
 		0226AFE51D7AA2650057C899 /* IndexTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0226AFE41D7AA2650057C899 /* IndexTableView.swift */; };
+		025CED1B1D98BCCC00B7E7D4 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CED181D98BCCC00B7E7D4 /* LoginViewController.swift */; };
+		025CED1D1D98BD0700B7E7D4 /* OtherLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CED1C1D98BD0700B7E7D4 /* OtherLoginView.swift */; };
+		025CED1F1D99431800B7E7D4 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CED1E1D99431800B7E7D4 /* AccountView.swift */; };
+		025CED211D99580600B7E7D4 /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025CED201D99580600B7E7D4 /* CodeView.swift */; };
 		026F76AC1D791AF900F0CAB2 /* IndexFiveOperateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F76AB1D791AF900F0CAB2 /* IndexFiveOperateCell.swift */; };
 		026F76AE1D7922C700F0CAB2 /* IndexHotCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F76AD1D7922C700F0CAB2 /* IndexHotCell.swift */; };
 		026F76B01D79259600F0CAB2 /* IndexHotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026F76AF1D79259600F0CAB2 /* IndexHotModel.swift */; };
@@ -83,9 +86,12 @@
 /* Begin PBXFileReference section */
 		0216E9DE1D90113A00901096 /* DestinationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationViewController.swift; sourceTree = "<group>"; };
 		0216E9E01D90117500901096 /* DestinationTableVie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DestinationTableVie.swift; sourceTree = "<group>"; };
-		021C36981D97923C00A1C00E /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		021C369A1D97977400A1C00E /* UserInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		0226AFE41D7AA2650057C899 /* IndexTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexTableView.swift; sourceTree = "<group>"; };
+		025CED181D98BCCC00B7E7D4 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		025CED1C1D98BD0700B7E7D4 /* OtherLoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherLoginView.swift; sourceTree = "<group>"; };
+		025CED1E1D99431800B7E7D4 /* AccountView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		025CED201D99580600B7E7D4 /* CodeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
 		026F76AB1D791AF900F0CAB2 /* IndexFiveOperateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexFiveOperateCell.swift; sourceTree = "<group>"; };
 		026F76AD1D7922C700F0CAB2 /* IndexHotCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexHotCell.swift; sourceTree = "<group>"; };
 		026F76AF1D79259600F0CAB2 /* IndexHotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IndexHotModel.swift; sourceTree = "<group>"; };
@@ -210,9 +216,36 @@
 		021C36971D97922700A1C00E /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
-				021C36981D97923C00A1C00E /* LoginViewController.swift */,
+				025CED171D98BCCC00B7E7D4 /* Controllers */,
+				025CED191D98BCCC00B7E7D4 /* Model */,
+				025CED1A1D98BCCC00B7E7D4 /* View */,
 			);
 			path = LoginViewController;
+			sourceTree = "<group>";
+		};
+		025CED171D98BCCC00B7E7D4 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				025CED181D98BCCC00B7E7D4 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		025CED191D98BCCC00B7E7D4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		025CED1A1D98BCCC00B7E7D4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				025CED1C1D98BD0700B7E7D4 /* OtherLoginView.swift */,
+				025CED1E1D99431800B7E7D4 /* AccountView.swift */,
+				025CED201D99580600B7E7D4 /* CodeView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		02AD49F51D7513FC00C88F79 = {
@@ -687,6 +720,7 @@
 				02A31C181D92BBC60017D68B /* DestinaTableViewCell.swift in Sources */,
 				0226AFE51D7AA2650057C899 /* IndexTableView.swift in Sources */,
 				026F76AE1D7922C700F0CAB2 /* IndexHotCell.swift in Sources */,
+				025CED1F1D99431800B7E7D4 /* AccountView.swift in Sources */,
 				02A31C1A1D92CB000017D68B /* QYFooter.swift in Sources */,
 				02DA02AA1D7833C00076D944 /* IndexTravelModel.swift in Sources */,
 				02E939041D9596FC00C5BE2F /* MyVCTableView.swift in Sources */,
@@ -696,13 +730,15 @@
 				02AD4A3D1D751BCD00C88F79 /* UIViewExt.swift in Sources */,
 				02E871871D76C88900D11C63 /* IndexTitleBarCell.swift in Sources */,
 				02D7B4F61D90CB9100C1D4E1 /* DestinationModel.swift in Sources */,
-				021C36991D97923C00A1C00E /* LoginViewController.swift in Sources */,
 				02E870E51D76771000D11C63 /* GCDQueue.m in Sources */,
 				02DA02A81D7830BF0076D944 /* IndexTravelCell.swift in Sources */,
+				025CED1B1D98BCCC00B7E7D4 /* LoginViewController.swift in Sources */,
 				026F76BA1D79841300F0CAB2 /* IndexRefresh_footer.swift in Sources */,
 				0216E9E11D90117500901096 /* DestinationTableVie.swift in Sources */,
 				0216E9DF1D90113A00901096 /* DestinationViewController.swift in Sources */,
+				025CED211D99580600B7E7D4 /* CodeView.swift in Sources */,
 				026F76B41D792E3B00F0CAB2 /* IndexLabelCell.swift in Sources */,
+				025CED1D1D98BD0700B7E7D4 /* OtherLoginView.swift in Sources */,
 				02AD4A041D7513FC00C88F79 /* ViewController.swift in Sources */,
 				02E870E71D76771000D11C63 /* GCDTimer.m in Sources */,
 				028C27A81D92288600CDA7A2 /* DestinaCollectionView.swift in Sources */,

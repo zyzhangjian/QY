@@ -52,7 +52,14 @@ class MyVCTableView: UITableView {
         self.addSubview(headerTopView)
         
         //个人信息View
-        infoView  = MyInfoView.init(frame: CGRectMake(0, -138, ScreenWidth, 138))
+        infoView  = MyInfoView.init(frame: CGRectMake(0, -138, ScreenWidth, 138), block: { (code) in
+
+            if (myTableBlock != nil) {
+                
+                myTableBlock!(dic: ["code" : "1"])
+            }
+            
+        })
         self.addSubview(infoView)
         
         //注册cell
@@ -98,6 +105,14 @@ extension MyVCTableView : UITableViewDelegate,UITableViewDataSource,UIScrollView
             
             let cell : MyOrderCell = tableView.dequeueReusableCellWithIdentifier("topCell") as! MyOrderCell
             
+            cell.myOrderBlock = { (code : Int) -> Void in
+
+                if (myTableBlock != nil) {
+                    
+                    myTableBlock!(dic: ["code" : "1"])
+                }
+            }
+
             return cell
             
         }else{

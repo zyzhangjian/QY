@@ -8,8 +8,13 @@
 
 import UIKit
 
+
+
 class MyOrderCell: UITableViewCell {
 
+    typealias orderBlock = (code : Int)->Void
+    var myOrderBlock  = orderBlock?()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -19,7 +24,7 @@ class MyOrderCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.selectionStyle = .None
-        
+
         self.createSelf()
     }
     
@@ -43,6 +48,13 @@ class MyOrderCell: UITableViewCell {
         let myAllOrderLabel = UILabel.init(frame: CGRectMake(0, 0, ScreenWidth - 21, 40))
         myAllOrderLabel.text = "查看全部订单 >"
         myAllOrderLabel.textColor = UIColor.RGB(0x25daac)
+        myAllOrderLabel.bk_whenTapped({
+            
+            if self.myOrderBlock != nil {
+                
+                self.myOrderBlock!(code: 0)
+            }
+        })
         myAllOrderLabel.font = UIFont.systemFontOfSize(14)
         myAllOrderLabel.textAlignment = NSTextAlignment.Right
         topView.addSubview(myAllOrderLabel)
@@ -62,6 +74,14 @@ class MyOrderCell: UITableViewCell {
         for index in 0 ..< 4 {
             
             let button = UIButton.init(frame: CGRectMake(CGFloat(index) * (ScreenWidth / 4), 0, ScreenWidth / 4, 70))
+            button.tag = index
+            button.bk_whenTapped({ 
+                
+                if self.myOrderBlock != nil {
+                    
+                    self.myOrderBlock!(code: index + 1)
+                }
+            })
             bottomView.addSubview(button)
             
             let imageView = UIImageView.init(frame: CGRectMake(0, 14, 25, 25))

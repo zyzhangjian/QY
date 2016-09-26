@@ -8,11 +8,17 @@
 
 import UIKit
 
+typealias infoBlock = (code : Int)->Void
+var InfoBlock  = infoBlock?()
+
 class MyInfoView: UIView {
 
     var iconImageView : UIImageView!
-    override init(frame: CGRect) {
+    
+    init(frame: CGRect,block:(code : Int)->Void) {
         super.init(frame: frame)
+    
+        InfoBlock = block
         
         self.createSelf()
     }
@@ -29,19 +35,44 @@ class MyInfoView: UIView {
         iconImageView.layer.borderWidth = 3
         iconImageView.layer.cornerRadius = 30
         iconImageView.layer.masksToBounds = true
+        iconImageView.userInteractionEnabled = true
+        iconImageView.bk_whenTapped {
+            
+            if InfoBlock != nil {
+                
+                InfoBlock!(code: 0)
+            }
+        }
+
         iconImageView.layer.borderColor = UIColor.RGB(0x50b678).CGColor
         self.addSubview(iconImageView)
         
         let loginLabel = UILabel.init(frame: CGRectMake(iconImageView.right() + 20 , 0, ScreenWidth - (iconImageView.right() + 20), 21))
         loginLabel.text = "点击登录 ，体验更多"
         loginLabel.font = UIFont.systemFontOfSize(17)
+        loginLabel.userInteractionEnabled = true
+        loginLabel.bk_whenTapped {
+            
+            if InfoBlock != nil {
+                
+                InfoBlock!(code: 0)
+            }
+        }
         loginLabel.center = CGPointMake(loginLabel.center.x, iconImageView.center.y)
         loginLabel.textColor = UIColor.whiteColor()
         self.addSubview(loginLabel)
         
         
         let infoLabel = UILabel.init(frame: CGRectMake(0 , iconImageView.bottom() , ScreenWidth - 30, 21))
+        infoLabel.userInteractionEnabled = true
         infoLabel.text = "个人信息管理等 >"
+        infoLabel.bk_whenTapped { 
+            
+            if InfoBlock != nil {
+                
+                InfoBlock!(code: 0)
+            }
+        }
         infoLabel.font = UIFont.systemFontOfSize(13)
         infoLabel.textAlignment = NSTextAlignment.Right
         infoLabel.textColor = UIColor.whiteColor()
@@ -49,6 +80,7 @@ class MyInfoView: UIView {
         
         let bottomView = UIView.init(frame: CGRectMake(0, 88, ScreenWidth, 50))
         bottomView.backgroundColor = UIColor.clearColor()
+        bottomView.userInteractionEnabled = true
         self.addSubview(bottomView)
         
 
@@ -61,16 +93,34 @@ class MyInfoView: UIView {
             
             let label = UILabel.init(frame: CGRectMake(CGFloat(index) * (ScreenWidth / 3), 5, ScreenWidth / 3, 18))
             label.text = "0"
+            label.tag = index
+            label.userInteractionEnabled = true
             label.textAlignment = NSTextAlignment.Center
+            label.bk_whenTapped({
+                
+                if InfoBlock != nil {
+                    
+                    InfoBlock!(code: label.tag)
+                }
+            })
             label.textColor = UIColor.whiteColor()
             label.font = UIFont.boldSystemFontOfSize(14)
             bottomView.addSubview(label)
             
             let nameLabel = UILabel.init(frame: CGRectMake(CGFloat(index) * (ScreenWidth / 3), label.bottom(), ScreenWidth / 3, 21))
             nameLabel.text = index == 0 ? "我的订阅" : index == 2 ? "我的收藏" : "我的咨询"
+            nameLabel.tag = index
+            nameLabel.userInteractionEnabled = true
             nameLabel.textAlignment = NSTextAlignment.Center
             nameLabel.textColor = UIColor.whiteColor()
             nameLabel.font = UIFont.systemFontOfSize(14)
+            nameLabel.bk_whenTapped({ 
+                
+                if InfoBlock != nil {
+                    
+                    InfoBlock!(code: nameLabel.tag)
+                }
+            })
             bottomView.addSubview(nameLabel)
             
             if index < 2 {

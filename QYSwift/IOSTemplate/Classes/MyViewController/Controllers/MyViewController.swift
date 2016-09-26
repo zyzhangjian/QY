@@ -61,9 +61,8 @@ class MyViewController: BaseViewController {
         
         tableView = MyVCTableView.init(frame: CGRectMake(0, 0, ScreenWidth, ScreenHeight - 30), style: UITableViewStyle.Grouped, VC: self) { (dic : NSDictionary) in
             
-            if dic.objectForKey("code")?.intValue == 2 {
-                
-                
+//            if dic.objectForKey("code")?.intValue == 2 {
+
                 if UserInfo.instance.uid().isEmpty {
 
                     //解决延迟强制在主线程执行
@@ -74,7 +73,7 @@ class MyViewController: BaseViewController {
 
                 }
                 
-            }
+//            }
         }
     }
 

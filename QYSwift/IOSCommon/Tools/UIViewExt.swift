@@ -151,6 +151,34 @@ extension String {
 
 
 }
+
+// MARK: - UILabel
+extension UILabel {
+    
+    //下划线
+    func bottomLine(str : String) -> Void {
+        
+        let str1 = NSMutableAttributedString(string: str)
+        let range1 = NSRange(location: 0, length: str1.length)
+        let number = NSNumber(integer:NSUnderlineStyle.StyleSingle.rawValue)//此处需要转换为NSNumber 不然不对,rawValue转换为integer
+        str1.addAttribute(NSUnderlineStyleAttributeName, value: number, range: range1)
+        str1.addAttribute(NSForegroundColorAttributeName, value: UIColor.whiteColor(), range: range1)
+        self.attributedText = str1
+    }
+    
+}
+
+// MARK: - UILabel
+extension UIView {
+    
+    //控件居中
+    func center(view : UIView) -> Void {
+        
+        self.center = CGPointMake(view.center.x, self.center.y)
+        
+    }
+    
+}
 // MARK: - UIImageView
 extension UIImageView {
     
@@ -158,6 +186,15 @@ extension UIImageView {
         self.layer.cornerRadius = CGRectGetHeight(self.bounds)/2
         self.layer.masksToBounds = true
         return self
+    }
+}
+// MARK: - UITextField
+extension UITextField {
+    
+    //设置placeholder颜色
+    func placeholderColor(color : UIColor) -> Void {
+        
+         self.setValue(color, forKeyPath: "_placeholderLabel.textColor")
     }
 }
 
