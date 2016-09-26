@@ -77,6 +77,7 @@ class AccountView: UIView {
         //登录按钮
         let loginButton = UIButton.init(frame: CGRectMake(0, forgetPwd.bottom() + 55, 120, 32))
         loginButton.center(self)
+        loginButton.layer.cornerRadius = 4
         loginButton.backgroundColor = UIColor.whiteColor()
         loginButton.setTitle("登录", forState: UIControlState.Normal)
         loginButton.setTitleColor(UIColor.RGB(0x25daac), forState: UIControlState.Normal)

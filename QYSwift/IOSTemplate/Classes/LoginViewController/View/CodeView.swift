@@ -64,6 +64,7 @@ class CodeView: UIView {
         getCodeButton.center = CGPointMake(ScreenWidth / 2, getCodeButton.center.y)
         getCodeButton.backgroundColor = UIColor.whiteColor()
         getCodeButton.setTitle("发送验证码", forState: UIControlState.Normal)
+        getCodeButton.layer.cornerRadius = 4
         getCodeButton.setTitleColor(UIColor.RGB(0x25daac), forState: UIControlState.Normal)
         getCodeButton.bk_whenTapped {
             

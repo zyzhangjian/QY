@@ -60,6 +60,7 @@ class LoginViewController: BaseViewController {
 
         segmented = UISegmentedControl.init(items: ["账号登录","短信验证码登录"])
         segmented.selectedSegmentIndex = 0
+        segmented.addTarget(self, action: #selector(segmentedChange), forControlEvents: UIControlEvents.ValueChanged)
         segmented.tintColor = UIColor.RGB(0x2ba675)
         segmented.frame = CGRectMake(15, rightButton.bottom() + 20, ScreenWidth - 30, 34)
         let dic = NSDictionary.init(object: UIColor.RGB(0x9fffdc) , forKey: NSForegroundColorAttributeName)
@@ -73,6 +74,11 @@ class LoginViewController: BaseViewController {
             
         }
         view.addSubview(otherView)
+    }
+    
+    func segmentedChange() -> Void {
+        
+        rootSV.contentOffset.x = segmented.selectedSegmentIndex == 0 ? 0 : ScreenWidth
     }
     
     // MARK: - CreateScrollView
