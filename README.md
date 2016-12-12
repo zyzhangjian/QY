@@ -3,6 +3,7 @@
 
 ![image](http://fl.sokie.org/qy1.gif)
 ![image](http://fl.sokie.org/qy2.gif)
+![image](http://fl.sokie.org/qy3.gif)
 
 ##有问题反馈
 
