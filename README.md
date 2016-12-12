@@ -2,6 +2,7 @@
 空闲时间用Swift语言仿写的穷游App（看着好看才写的）
 
 ![image](http://fl.sokie.org/qy1.gif)
+![image](http://fl.sokie.org/qy2.gif)
 
 ##有问题反馈
 
